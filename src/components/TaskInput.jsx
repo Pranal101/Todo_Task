@@ -8,7 +8,7 @@ const TaskInput = () => {
   const dispatch = useDispatch();
 
   const handleSubmit = (e) => {
-    e.preventDefault();
+    e.preventDefault(); //Prevent Default submissions
     if (task.trim()) {
       dispatch(addTask(task));
       setTask("");

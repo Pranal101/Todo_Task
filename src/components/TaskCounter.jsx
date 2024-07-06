@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 
 const TaskCounter = () => {
   const tasks = useSelector((state) => state.tasks.tasks);
-  const completedTasks = tasks.filter((task) => task.completed).length;
+  const completedTasks = tasks.filter((task) => task.completed).length; //count completed tasks
 
   return (
     <div className="task-counter">

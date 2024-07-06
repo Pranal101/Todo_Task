@@ -1,7 +1,7 @@
 const initialState = {
   tasks: JSON.parse(localStorage.getItem("tasks")) || [],
 };
-
+//retrieve from local storage if tasks available
 const tasksReducer = (state = initialState, action) => {
   switch (action.type) {
     case "ADD_TASK":
@@ -20,7 +20,7 @@ const tasksReducer = (state = initialState, action) => {
       const tasksAfterDelete = state.tasks.filter(
         (task) => task.id !== action.payload.id
       );
-      localStorage.setItem("tasks", JSON.stringify(tasksAfterDelete));
+      localStorage.setItem("tasks", JSON.stringify(tasksAfterDelete)); //store in local storage
       return {
         ...state,
         tasks: tasksAfterDelete,

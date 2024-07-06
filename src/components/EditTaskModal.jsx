@@ -4,7 +4,7 @@ import { editTask } from "../redux/actions";
 import "./EditModal.css";
 
 const EditTaskModal = ({ isOpen, onClose, task }) => {
-  const [taskName, setTaskName] = React.useState(task.name);
+  const [taskName, setTaskName] = React.useState(task.name); //State for task name
   const dispatch = useDispatch();
 
   const handleSaveEdit = () => {
